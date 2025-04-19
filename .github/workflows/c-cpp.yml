@@ -40,7 +40,7 @@ jobs:
         pip install ./ambuild
     - name: Clone Dependencies
       run: |
-        git clone --depth 1 --recurse-submodules -j8 --shallow-submodules https://$OAUTH@github.com/SteamDatabase/SteamworksSDK.git SteamworksSDK
+        git clone --depth 1 --recurse-submodules -j8 --shallow-submodules https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/SteamDatabase/SteamworksSDK.git SteamworksSDK
         git clone --depth 1 --recurse-submodules -j8 --shallow-submodules -b sdk2013 https://github.com/alliedmodders/hl2sdk.git hl2sdk-sdk2013
         git clone --depth 1 --recurse-submodules -j8 --shallow-submodules -b 1.10-dev https://github.com/alliedmodders/metamod-source.git mmsource-central
         git clone --depth 1 --recurse-submodules -j8 --shallow-submodules -b 1.7-dev https://github.com/alliedmodders/sourcemod.git sourcemod-central
