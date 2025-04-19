@@ -35,7 +35,7 @@ jobs:
       run: |
         mkdir assets
         cd assets
-        git clone --depth 1 --recurse-submodules -j8 --shallow-submodules -b fix-deps https://github.com/alliedmodders/ambuild.git
+        git clone --depth 1 --recurse-submodules -j8 --shallow-submodules https://github.com/alliedmodders/ambuild.git
         pip install ./ambuild
     - name: Clone Dependencies
       run: |
