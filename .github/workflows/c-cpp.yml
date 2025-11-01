@@ -60,8 +60,8 @@ jobs:
       run: cp AMBuildScript ../
     - name: Run build script
       run: |
-        cd build
-        bash ./build
+        python ../configure.py -s sdk2013 --hl2sdk-root ../assets --sm-path ../assets/sourcemod-central --mms-path ../assets/mmsource-central --steamworks-path ../assets/SteamworksSD
+        ambuild
     - uses: actions/upload-artifact@v4
       name: Upload build artifacts
       with:
